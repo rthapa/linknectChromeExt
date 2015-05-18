@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Getting Started Extension</title>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="jquery-1.11.0.min.js"></script>
+		<script src="jquery.cookie.js"></script>
+		<script src="list.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+		<body>
+			<div class="overlayBg">
+			</div>
+			<div class="addBookmarkDiv" style="opacity:0; display:none;">
+				<h4 class="addBookmarkFormHead">New Bookmark</h4>
+				<form class="addBookmarkForm" id="bookmarkform" method="post">
+					<!-- <input type="text" name="bookmark_title" placeholder="Bookmark title"> -->
+					<input id="bookmarklink" type="text" name="bookmark_link" placeholder="Bookmark link">
+					<input type="hidden" id="bidEdit" />
+					<!-- <input type="text" name="bookmark_description" placeholder="Bookmark description"> -->
+					<textarea id="bookmarkDescription" name="bookmark_description" placeholder="Bookmark notes.." class="addTextarea"></textarea>
+					<br/>
+					<div id="addBookmarkStatus" style="display:none;background-color:#A8A8A8;font-size: 0.9em; color:white;padding:5px; margin-bottom:5px">Bookmark link cannot be empty</div>
+					<span id="listAddBookmarkButonSpan">
+						<button class="button" id="saveBookmark"><i class="fa fa-bookmark"></i> Save</button>
+					</span>
+					<button class="button" id="cancelBookmark"><i class="fa fa-times"></i> Cancel</button>
+				</form>
+			</div>
+			<nav>
+				<button class="toggleSidebarBtn"><i class="fa fa-align-justify"></i></button>
+				<img src="linknect.png"/>
+				<button class="btn" style="margin: 3px 10px 0 0;"><i class="fa fa-power-off"></i></button>
+				<div style="clear:both;"></div>
+			</nav>
+			<div class="appSidebar">
+				<div class="userinfo">
+					<h4 id="sidebarUsername" style="text-align: center;font-size: 16px;">Unknown</h4>
+					<button class="btn" id="logoutBtn" style="margin-left:55px;"><i class="fa fa-power-off"></i> Log out</button>
+				</div>
+			</div>
+			<div id="optionBar">
+				<a href="dash.html"><button class="button"><i class="fa fa-long-arrow-left" style="margin-right: 5px;"></i> Back</button></a>
+				<button class="button" id="addBookmark"><i class="fa fa-plus" style="margin-right: 5px;"></i> Add Bookmark</button>
+				<button class="button" id="shareBookmark"><i class="fa fa-share-alt" style="margin-right: 5px;"></i> Share</button>
+			</div>
+			<div class="shareLinkDiv">
+				<span style="float: left;
+							padding: 6px;
+							margin-right: 5px;
+							color:white;
+							background-color: #0C343F;">
+					<i class="fa fa-share-alt" style="padding: 3px 7px 0 3px;"></i>
+				</span>
+				<h5 style="padding: 7px;background-color: #E2E2E2;" id="shareListLink">http://linknect.com</h5>
+				<div style="clear:both"></div>
+			</div>
+			<div id="content" style="padding:7px;">
+			</div>
+		</body>
+</html>
